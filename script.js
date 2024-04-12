@@ -71,15 +71,12 @@ function calculateTax() {
     return alert("Please fill the age");
   } 
   console.log(age);
-  // Calculate total income after deductions
-  const totalIncome = income + extraIncome - deductions;
 
-  // Determine taxable income (income above 8 Lakhs)
+  const totalIncome = income + extraIncome - deductions;
   const taxableIncome = Math.max(totalIncome - 800000, 0);
 
   let taxAmount = 0;
 
-  // Apply tax rates based on age
   if (taxableIncome > 0) {
     if (age === "<40") {
       taxAmount = taxableIncome * 0.3;
@@ -90,7 +87,6 @@ function calculateTax() {
     }
   }
 
-  // Display tax amount in modal
   const modal = document.getElementById("resultModal");
   const taxAmountElement = document.getElementById("taxAmount");
 
@@ -100,14 +96,11 @@ function calculateTax() {
 
   modal.style.display = "block";
 
-  // Retrieve close button inside modal
   const closeButton = modal.querySelector(".close");
 
-  // Add click event listener to close the modal
   closeButton.addEventListener("click", () => {
     modal.style.display = "none";
   });
 
-  // Reset form after calculation
   document.getElementById("taxForm").reset();
 }
