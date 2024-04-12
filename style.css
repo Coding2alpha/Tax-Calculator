@@ -1,0 +1,143 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto auto;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.level {
+  display: flex;
+}
+
+.form-control {
+  width: 100%; /* Set width to 100% of parent container */
+  height: 40px; /* Set desired height for input fields */
+  padding: 8px; /* Add padding to input fields */
+  font-size: 16px; /* Set font size for text inside input fields */
+  border: 1px solid #ccc; /* Add a border to input fields */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.level {
+  position: relative;
+}
+
+.tooltip-label {
+  margin-left: 4px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #007bff; /* Blue color for circle */
+  color: white;
+  text-align: center;
+  line-height: 20px; /* Center text vertically */
+  cursor: pointer;
+}
+
+.tooltip-label:hover + span {
+  visibility: visible;
+}
+
+span {
+  display: flex-col;
+  flex-wrap: wrap;
+  width: 200px;
+  position: absolute;
+  top: -15px;
+  margin-left: 3px;
+  background-color: slategray;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.divison {
+  position: relative;
+}
+
+.tooltip-label:hover + span {
+  visibility: visible;
+}
+
+.tooltip {
+  position: absolute;
+  color: white;
+  margin-top: 2px;
+  padding: 5px;
+  font-size: 20px;
+  visibility: hidden;
+  width: 20px; /* Set the width of the tooltip */
+  height: 20px; /* Set the height of the tooltip */
+  border: 2px solid ; /* Specify border properties */
+  border-radius: 50%; /* Create a circular border */
+  text-align: center;
+  cursor: pointer;
+}
+
+.tooltip.active {
+  visibility: visible;
+  color: red;
+  opacity: 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.close {
+  color: white;
+  border-radius: 5px;
+  background-color: #007bff;
+  float: right;
+  font-size: 20px;
+  padding: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    background-color: #007bff;
+    border-radius: 10px;
+    border-color: #007bff;
+    padding: 3px;
+    border-color: none;
+}
